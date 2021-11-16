@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.mySwiper', {
 
   speed: 400,
   spaceBetween: 100,
