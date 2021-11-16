@@ -37,8 +37,32 @@
         <!--<div class="swiper-scrollbar"></div>-->
     </div>
 
-    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-    <script src="gallery.js"></script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@7/swiper-bundle.esm.browser.min.js'
+
+        const swiper = new Swiper('.swiper', {
+
+            speed: 400,
+            spaceBetween: 100,
+            effect: 'coverflow',
+
+            // Optional parameters
+            direction: 'horizontal',
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+        });
+    </script>
+    <!--<script src="gallery.js"></script>-->
 </body>
 
 </html>
